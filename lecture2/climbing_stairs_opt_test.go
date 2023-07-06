@@ -1,8 +1,8 @@
-package lecture3
+package lecture2
 
 import "testing"
 
-func Test_climbStairs(t *testing.T) {
+func Test_climbStairsOpt(t *testing.T) {
 	type args struct {
 		n int
 	}
@@ -30,7 +30,7 @@ func Test_climbStairs(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := climbStairs(tt.args.n); got != tt.want {
+			if got := climbStairsOpt(tt.args.n); got != tt.want {
 				t.Errorf("climbStairs() = %v, want %v", got, tt.want)
 			}
 		})

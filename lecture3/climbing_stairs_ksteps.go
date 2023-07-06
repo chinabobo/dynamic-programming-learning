@@ -3,7 +3,7 @@ package lecture3
 /*
 Problem:
 	Climbing Stairs (k steps)
-	You are climbing a stair case. It takes n steps to reach to the top.
+	You are climbing a staircase. It takes n steps to reach to the top.
 	Each time you can climb 1..k steps.
 	In how many distinct ways can you climb to the top?
 Framework for Solving DP Problems:

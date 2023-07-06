@@ -1,11 +1,9 @@
-package lecture3
-
-import "github.com/chinabobo/dynamic-programming-learning/internal/util"
+package lecture2
 
 /*
 Problem:
-	Climbing Stairs (space optimized)
-	You are climbing a stair case. It takes n steps to reach to the top.
+	Climbing Stairs
+	You are climbing a staircase. It takes n steps to reach to the top.
 	Each time you can either climb 1 or 2 steps.
 	In how many distinct ways can you climb to the top?
 Framework for Solving DP Problems:
@@ -23,20 +21,14 @@ Framework for Solving DP Problems:
 */
 
 // Time complexity: O(n)
-// Space complexity: O(1)
+// Space complexity: O(n)
+
 func climbStairs(n int) int {
-	// dp := make([]int, n+1) // 8b * 1000001=8mb
-	// [1,1,2,3]
-	//  a b c
-	//    a b c
-	a := 1
-	b := 1
-	var c int
+	dp := make([]int, n+1)
+	dp[0] = 1
+	dp[1] = 1
 	for i := 2; i <= n; i++ {
-		c = a + b
-		a = b
-		b = c
+		dp[i] = dp[i-1] + dp[i-2]
 	}
-	util.PrintMemory()
-	return c
+	return dp[n]
 }
